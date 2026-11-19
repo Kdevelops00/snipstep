@@ -7,7 +7,7 @@ Use the [validation record](VALIDATION.md) to distinguish an implemented feature
 - [x] Use Snipstep in the app, documentation, and widget configuration. Credit @Kdevelops00 and upstream work. The MIT license names the project copyright holder.
 - [x] Verify manual tasks, offline capture processing, API request handling, and widget data logic with local tests.
 - [x] Review the cropped walkthrough screenshots and credit the source material.
-- [ ] Verify GitHub CI and private vulnerability reporting.
+- Check the [GitHub Actions run](https://github.com/Kdevelops00/snipstep/actions/workflows/ci.yml) and [private vulnerability report form](https://github.com/Kdevelops00/snipstep/security/advisories/new).
 
 ## Consumer download
 
