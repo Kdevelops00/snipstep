@@ -1,0 +1,26 @@
+name: Build and test
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  macos:
+    runs-on: macos-15
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Source and history secret checks
+        run: python3 scripts/check-secrets.py --history
+      - name: Core tests (no live credentials)
+        run: swift test --parallel --jobs 2
+      - name: Build and analyze
+        run: >-
+          xcodebuild -project SnapLater.xcodeproj -scheme SnapLater
+          -configuration Release -destination 'platform=macOS,arch=arm64'
+          -derivedDataPath build -jobs 2 CODE_SIGNING_ALLOWED=NO build analyze
+      - name: Inspect built app
+        run: python3 scripts/check-secrets.py --artifact build/Build/Products/Release/Snipstep.app
+      # Native UI tests require a logged-in desktop and automation permissions.
+      # Run them locally; never add live Gemini credentials to public CI.
