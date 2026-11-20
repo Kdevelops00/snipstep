@@ -1,20 +1,22 @@
 <div align="center">
-  <img src="MacApp/Assets.xcassets/SnapLaterGlassIcon.appiconset/icon-128@2x.png" width="88" alt="Snipstep capture-bracket logo">
+  <img src="MacApp/Assets.xcassets/SnipstepGlassIcon.appiconset/icon-128@2x.png" width="88" alt="Snipstep capture-bracket logo">
   <h1>Snipstep</h1>
   <p><strong>For the things you screenshot and mean to do.</strong></p>
-  <p>A simple macOS to-do list, with the original still attached.</p>
+  <p>Turn screenshots into a to-do list on your Mac.</p>
   <p>Created by <a href="https://github.com/Kdevelops00">@Kdevelops00</a></p>
 </div>
 
 [Build locally](#build-locally) · [AI setup](docs/AI_SETUP.md) · [Credits](CREDITS.md)
 
-You find a GitHub project you want to try, but you’re halfway through something else. **Take a screenshot and Snipstep puts it on your to-do list with the original attached.** You can also type tasks without a screenshot.
+You screenshot a project while scrolling because you want to try it later. A week later, it’s somewhere in a gallery full of screenshots. Even when you find it, the image alone may say little about what you wanted to do.
+
+With Snipstep running, press **Control–Option–X** while the project is on screen. Open the saved task and give it a next step, like **“Try Ponytail on one pull request.”** When you sit down to work, open your To-Do list or desktop widget, pick an unfinished task, and check it off when you’re done. The original screenshot stays attached if you need the details.
 
 ![The Ponytail GitHub repository beside the Snipstep task list, with a task to try Ponytail on a small pull request](docs/media/capture-to-task.png)
 
 ## Keep the context
 
-Press **Control–Option–X** to save the display under your pointer. A sound confirms the save. Open the task to see the original next to your editable title and notes. You can change the shortcut in Settings.
+The shortcut captures the whole display under your pointer. A sound confirms the save. You can edit the title and notes, import an existing screenshot, or type a task without an image. Change the capture shortcut in Settings.
 
 ![A Snipstep task with the saved Ponytail screenshot and a suggested summary](docs/media/saved-screenshot.png)
 
@@ -40,11 +42,11 @@ Snipstep is an MIT-licensed developer preview. Build it from source with Xcode.
 
 The deployment target is macOS 15.2, and the Swift package requires Swift 6. Use full Xcode. See [validation](docs/VALIDATION.md) for the toolchain and machine tested on this revision. Minimum macOS and Intel runtime are still unverified.
 
-Open `SnapLater.xcodeproj`, select **SnapLater → My Mac**, and build/run. The internal project, bundle identifiers, data paths and `snaplater://` scheme retain their development names to preserve existing libraries and widget links. The visible app is Snipstep.
+Open `Snipstep.xcodeproj`, select **Snipstep → My Mac**, and build/run.
 
 ```sh
 swift test --parallel --jobs 2
-xcodebuild -project SnapLater.xcodeproj -scheme SnapLater \
+xcodebuild -project Snipstep.xcodeproj -scheme Snipstep \
   -configuration Release -destination 'platform=macOS,arch=arm64' \
   -derivedDataPath build CODE_SIGNING_ALLOWED=NO build analyze
 ```

@@ -1,6 +1,6 @@
 import Foundation
 import Testing
-@testable import SnapLaterCore
+@testable import SnipstepCore
 
 private actor LocalStub: TaskEnriching {
     var calls = 0

@@ -1,7 +1,7 @@
 import Foundation
 import Testing
 import Darwin
-@testable import SnapLaterCore
+@testable import SnipstepCore
 
 @Test(.enabled(if: ProcessInfo.processInfo.environment["SNAPLATER_PERFORMANCE_CHECK"] == "1"))
 @MainActor func syntheticThousandTaskLibrary() async throws {

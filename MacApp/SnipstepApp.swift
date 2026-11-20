@@ -1,7 +1,7 @@
 import SwiftUI
-import SnapLaterCore
+import SnipstepCore
 
-@main struct SnapLaterApp: App {
+@main struct SnipstepApp: App {
     @NSApplicationDelegateAdaptor(DesktopAppDelegate.self) private var delegate
     @State private var model: AppModel?
     init() {

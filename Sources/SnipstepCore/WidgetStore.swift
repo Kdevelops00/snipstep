@@ -44,7 +44,7 @@ public struct WidgetStore: Sendable {
         try FileManager.default.createDirectory(at: root, withIntermediateDirectories: true, attributes: [.posixPermissions: 0o700])
     }
     public static func configured() -> WidgetStore? {
-        guard let group = Bundle.main.object(forInfoDictionaryKey: "SnapLaterAppGroup") as? String,
+        guard let group = Bundle.main.object(forInfoDictionaryKey: "SnipstepAppGroup") as? String,
               !group.hasPrefix("."),
               let url = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: group) else { return nil }
         return try? WidgetStore(root: url.appendingPathComponent("Widget", isDirectory: true))

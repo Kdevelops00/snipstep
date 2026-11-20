@@ -2,11 +2,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "SnapLater",
+    name: "Snipstep",
     platforms: [.macOS("15.2"), .iOS(.v18)],
-    products: [.library(name: "SnapLaterCore", targets: ["SnapLaterCore"])],
+    products: [.library(name: "SnipstepCore", targets: ["SnipstepCore"])],
     targets: [
-        .target(name: "SnapLaterCore"),
-        .testTarget(name: "SnapLaterCoreTests", dependencies: ["SnapLaterCore"])
+        .target(name: "SnipstepCore"),
+        .testTarget(name: "SnipstepCoreTests", dependencies: ["SnipstepCore"])
     ]
 )

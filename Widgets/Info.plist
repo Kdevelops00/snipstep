@@ -8,6 +8,6 @@
 <key>CFBundlePackageType</key><string>XPC!</string>
 <key>CFBundleShortVersionString</key><string>0.1.0</string>
 <key>CFBundleVersion</key><string>9</string>
-<key>SnapLaterAppGroup</key><string>$(DEVELOPMENT_TEAM).org.snaplater.shared</string>
+<key>SnipstepAppGroup</key><string>$(DEVELOPMENT_TEAM).org.snaplater.shared</string>
 <key>NSExtension</key><dict><key>NSExtensionPointIdentifier</key><string>com.apple.widgetkit-extension</string></dict>
 </dict></plist>

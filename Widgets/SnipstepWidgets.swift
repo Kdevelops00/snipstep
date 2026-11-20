@@ -1,7 +1,7 @@
 import SwiftUI
 import WidgetKit
 import AppIntents
-import SnapLaterCore
+import SnipstepCore
 
 private struct Entry: TimelineEntry {
     let date: Date
@@ -145,7 +145,7 @@ private struct Checklist: View {
                         if !task.summary.isEmpty { Text(task.summary).font(.caption2).foregroundStyle(.secondary).lineLimit(1) }
                     }.frame(maxWidth: .infinity, alignment: .leading)
                     if let data = task.thumbnail, let image = NSImage(data: data) {
-                        Link(destination: URL(string: "snaplater://task/\(task.id.uuidString)")!) {
+                        Link(destination: TaskLink.detail(task.id).url) {
                             Image(nsImage: image).resizable().widgetAccentedRenderingMode(.fullColor).scaledToFit()
                                 .frame(width: family == .systemLarge ? 86 : 72, height: family == .systemLarge ? 54 : 40)
                                 .clipShape(RoundedRectangle(cornerRadius: 5))
@@ -208,6 +208,6 @@ struct ProgressWidget: Widget {
             .supportedFamilies([.systemSmall, .systemMedium])
     }
 }
-@main struct SnapLaterWidgetBundle: WidgetBundle {
+@main struct SnipstepWidgetBundle: WidgetBundle {
     var body: some Widget { ToDoWidget(); ProgressWidget() }
 }

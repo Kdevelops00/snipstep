@@ -1,6 +1,6 @@
 import Foundation
 import Testing
-@testable import SnapLaterCore
+@testable import SnipstepCore
 
 @Test func cloudConnectionRejectsUnsafeDestinationsAndBindsConsent() throws {
     let base = CloudConnection(format: .chatCompletions, endpoint: "https://example.test/v1/chat/completions", model: "vision-model")

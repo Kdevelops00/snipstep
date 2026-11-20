@@ -6,7 +6,7 @@ public enum TaskLink: Equatable, Sendable {
     case detail(UUID)
 
     public init?(url: URL) {
-        guard url.scheme == "snaplater", url.user == nil, url.password == nil,
+        guard ["snipstep", "snaplater"].contains(url.scheme ?? ""), url.user == nil, url.password == nil,
               url.port == nil, url.query == nil, url.fragment == nil else { return nil }
         if url.host == "new-task", url.path.isEmpty || url.path == "/" {
             self = .newTask
@@ -18,8 +18,8 @@ public enum TaskLink: Equatable, Sendable {
 
     public var url: URL {
         switch self {
-        case .newTask: URL(string: "snaplater://new-task")!
-        case .detail(let id): URL(string: "snaplater://task/\(id.uuidString)")!
+        case .newTask: URL(string: "snipstep://new-task")!
+        case .detail(let id): URL(string: "snipstep://task/\(id.uuidString)")!
         }
     }
 }

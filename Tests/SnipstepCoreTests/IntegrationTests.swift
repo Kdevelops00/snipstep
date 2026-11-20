@@ -1,7 +1,7 @@
 import AppKit
 import Foundation
 import Testing
-@testable import SnapLaterCore
+@testable import SnipstepCore
 
 @MainActor func textFixture() throws -> Data {
     let image = NSImage(size: NSSize(width: 900, height: 320))
@@ -16,7 +16,7 @@ import Testing
 }
 
 @Test @MainActor func realVisionRecognizesSyntheticScreenshot() async throws {
-    let root = FileManager.default.temporaryDirectory.appendingPathComponent("SnapLaterVision-" + UUID().uuidString)
+    let root = FileManager.default.temporaryDirectory.appendingPathComponent("SnipstepVision-" + UUID().uuidString)
     let attachments = try AttachmentStore(root: root)
     defer { try? FileManager.default.removeItem(at: root) }
     let manifest = try await attachments.save(textFixture(), mode: .ocrOnly)

@@ -1,6 +1,6 @@
 import Foundation
 import Testing
-@testable import SnapLaterCore
+@testable import SnipstepCore
 
 @Test func modelImportRejectsWrongFormatAndSymlinksWithoutChangingOriginal() throws {
     let root = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)

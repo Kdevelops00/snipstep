@@ -1,7 +1,7 @@
 import AppKit
 import SwiftUI
 import WidgetKit
-import SnapLaterCore
+import SnipstepCore
 
 // Render actual views with an isolated in-memory library; never capture the desktop.
 @main struct DemoRenderer {

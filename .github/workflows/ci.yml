@@ -17,7 +17,7 @@ jobs:
         run: swift test --parallel --jobs 2
       - name: Build and analyze
         run: >-
-          xcodebuild -project SnapLater.xcodeproj -scheme SnapLater
+          xcodebuild -project Snipstep.xcodeproj -scheme Snipstep
           -configuration Release -destination 'platform=macOS,arch=arm64'
           -derivedDataPath build -jobs 2 CODE_SIGNING_ALLOWED=NO build analyze
       - name: Inspect built app

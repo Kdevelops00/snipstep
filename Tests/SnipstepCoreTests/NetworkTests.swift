@@ -1,6 +1,6 @@
 import Foundation
 import Testing
-@testable import SnapLaterCore
+@testable import SnipstepCore
 
 private final class StubResponse: @unchecked Sendable {
     static let shared = StubResponse()

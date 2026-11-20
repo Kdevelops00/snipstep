@@ -10,4 +10,4 @@ The blue capture-bracket S mark represents keeping a frame and moving forward. K
 
 Creator and maintainer: [@Kdevelops00](https://github.com/Kdevelops00). Public claims must match working behavior. See CREDITS.md for upstream technology and assistance.
 
-The application, app menu and widget names use Snipstep. Internal SnapLater storage paths, bundle IDs and URL links preserve existing libraries and credentials.
+Use Snipstep in the app, widgets, shortcuts, and contributor instructions.

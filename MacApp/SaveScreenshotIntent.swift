@@ -1,6 +1,6 @@
 import AppIntents
 import UniformTypeIdentifiers
-import SnapLaterCore
+import SnipstepCore
 
 struct SaveScreenshotIntent: AppIntent {
     static let title: LocalizedStringResource = "Save Screenshot to Snipstep"

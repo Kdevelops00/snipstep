@@ -1,5 +1,5 @@
 import SwiftUI
-import SnapLaterCore
+import SnipstepCore
 
 struct TaskDetail: View {
     let task: SavedTask

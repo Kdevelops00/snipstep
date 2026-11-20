@@ -1,6 +1,6 @@
 import AppKit
 import Observation
-import SnapLaterCore
+import SnipstepCore
 import WidgetKit
 import UserNotifications
 import UniformTypeIdentifiers
@@ -52,8 +52,8 @@ import UniformTypeIdentifiers
         widgetStore = testing ? nil : WidgetStore.configured()
         let root: URL
         if testing {
-            root = FileManager.default.temporaryDirectory.appendingPathComponent("SnapLaterUITests-" + UUID().uuidString)
-            preferences = UserDefaults(suiteName: "SnapLaterUITests-" + UUID().uuidString)!
+            root = FileManager.default.temporaryDirectory.appendingPathComponent("SnipstepUITests-" + UUID().uuidString)
+            preferences = UserDefaults(suiteName: "SnipstepUITests-" + UUID().uuidString)!
         } else {
             root = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
                 .appendingPathComponent("SnapLater", isDirectory: true)

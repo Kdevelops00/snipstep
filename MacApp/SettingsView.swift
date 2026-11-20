@@ -1,5 +1,5 @@
 import SwiftUI
-import SnapLaterCore
+import SnipstepCore
 
 struct SettingsView: View {
     let model: AppModel

@@ -1,7 +1,7 @@
 import Foundation
 import Testing
 import CoreGraphics
-@testable import SnapLaterCore
+@testable import SnipstepCore
 
 func testImage() throws -> Data {
     let context = CGContext(data: nil, width: 32, height: 32, bitsPerComponent: 8, bytesPerRow: 0,
@@ -60,7 +60,7 @@ actor StubAI: TaskEnriching {
     let attachments: AttachmentStore
     let pipeline: CapturePipeline
     init(ocr: any OCRRecognizing = StubOCR(), ai: any TaskEnriching = StubAI(), persistent: Bool = false) throws {
-        root = FileManager.default.temporaryDirectory.appendingPathComponent("SnapLaterTests-" + UUID().uuidString)
+        root = FileManager.default.temporaryDirectory.appendingPathComponent("SnipstepTests-" + UUID().uuidString)
         try FileManager.default.createDirectory(at: root, withIntermediateDirectories: true)
         store = try TaskStore(url: persistent ? root.appendingPathComponent("Library.store") : nil, inMemory: !persistent)
         attachments = try AttachmentStore(root: root.appendingPathComponent("Attachments"))

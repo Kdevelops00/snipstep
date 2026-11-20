@@ -1,6 +1,6 @@
 # Architecture
 
-Snipstep is a native SwiftUI/AppKit macOS app, with a Swift package for core logic and a WidgetKit extension. Internal SnapLater identifiers remain stable for existing development installations.
+Snipstep is a native SwiftUI/AppKit macOS app, with a Swift package for core logic and a WidgetKit extension. The app retains its original bundle IDs, app group, Application Support directory, Keychain services, and widget kinds so updates can use existing data. Older task links still open.
 
 ## Capture to task
 
@@ -18,7 +18,7 @@ Local AI sends up to 12,000 characters of cached text to a fixed loopback Ollama
 
 A team-prefixed shared app group contains bounded snapshots of up to twelve titles, summaries, completion timestamps and small JPEG previews, plus a command outbox protected by a file lock and atomic writes. The main app retains the canonical library and full originals. The extension has no network entitlement. Completion/deletion intents publish desired state; timestamp-aware acknowledgement preserves newer clicks. The main app commits commands on notification or next launch.
 
-Only pending rows and a brief recent-completion acknowledgement appear in the checklist. A separate Progress widget displays totals. Add task links to `snaplater://new-task`; the app waits for startup, returns to To-Do, and focuses its existing manual composer. Screenshot links use a task UUID, never a file path or credential. TaskLink validates the supported routes.
+Only pending rows and a brief recent-completion acknowledgement appear in the checklist. A separate Progress widget displays totals. Add task links to `snipstep://new-task`; the app waits for startup, returns to To-Do, and focuses its existing manual composer. Screenshot links use a task UUID, never a file path or credential. TaskLink validates the supported routes.
 
 Widget timelines and outer materials are ultimately controlled by macOS. An app can request reloads but cannot guarantee immediate refresh, erase every system rendering cache, or force a system-wide icon style for just itself.
 

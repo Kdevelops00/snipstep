@@ -3,7 +3,7 @@ import CryptoKit
 
 public enum GGUFImport {
     public static let maximumBytes = 4_000_000_000
-    /// Bounded-memory fingerprinting; the chosen source is never changed or copied by SnapLater.
+    /// Bounded-memory fingerprinting; the chosen source is never changed or copied by Snipstep.
     public static func digest(of url: URL) throws -> (digest: String, size: Int) {
         let attrs = try url.resourceValues(forKeys: [.isRegularFileKey, .isSymbolicLinkKey, .fileSizeKey])
         guard attrs.isRegularFile == true, attrs.isSymbolicLink != true,

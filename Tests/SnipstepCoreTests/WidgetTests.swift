@@ -1,7 +1,7 @@
 import Foundation
 import ImageIO
 import Testing
-@testable import SnapLaterCore
+@testable import SnipstepCore
 
 @Test func widgetOutboxKeepsNewerClickAndPersistsSnapshot() throws {
     let root = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)

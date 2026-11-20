@@ -1,6 +1,6 @@
 import SwiftUI
 import Charts
-import SnapLaterCore
+import SnipstepCore
 
 private enum LibrarySection: String, CaseIterable, Identifiable {
     case inbox = "To-Do", completed = "Completed", analytics = "Analytics", archive = "Archive"

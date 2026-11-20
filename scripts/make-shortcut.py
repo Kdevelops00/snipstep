@@ -12,7 +12,7 @@ args = parser.parse_args()
 assert len(args.team) == 10 and args.team.isalnum()
 capture_id = str(uuid.uuid4()).upper()
 workflow = {
-    'WFWorkflowName': 'Capture to SnapLater',
+    'WFWorkflowName': 'Capture to Snipstep',
     'WFWorkflowClientVersion': '1700',
     'WFWorkflowClientRelease': '26.0',
     'WFWorkflowMinimumClientVersion': 900,
@@ -28,7 +28,7 @@ workflow = {
         {'WFWorkflowActionIdentifier': 'org.snaplater.local.SaveScreenshotIntent',
          'WFWorkflowActionParameters': {
              'AppIntentDescriptor': {'TeamIdentifier': args.team, 'BundleIdentifier': 'org.snaplater.local',
-                                     'Name': 'SnapLater', 'AppIntentIdentifier': 'SaveScreenshotIntent'},
+                                     'Name': 'Snipstep', 'AppIntentIdentifier': 'SaveScreenshotIntent'},
              'screenshot': {'Value': {'OutputUUID': capture_id, 'OutputName': 'Screenshot', 'Type': 'ActionOutput'},
                             'WFSerializationType': 'WFTextTokenAttachment'},
              'UUID': str(uuid.uuid4()).upper()}}

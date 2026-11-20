@@ -13,7 +13,7 @@ For a pull request, explain the problem, resulting behavior, checks performed, a
 ```sh
 swift test --parallel --jobs 2
 python3 scripts/check-secrets.py --history
-xcodebuild -project SnapLater.xcodeproj -scheme SnapLater \
+xcodebuild -project Snipstep.xcodeproj -scheme Snipstep \
   -configuration Debug -destination 'platform=macOS,arch=arm64' \
   -derivedDataPath build CODE_SIGNING_ALLOWED=NO build analyze
 ```

@@ -24,12 +24,12 @@
 	<key>NSAppTransportSecurity</key>
 	<dict><key>NSAllowsLocalNetworking</key><true/></dict>
 	<key>CFBundleURLTypes</key>
-	<array><dict><key>CFBundleURLName</key><string>SnapLater task</string><key>CFBundleURLSchemes</key><array><string>snaplater</string></array></dict></array>
+	<array><dict><key>CFBundleURLName</key><string>Snipstep task</string><key>CFBundleURLSchemes</key><array><string>snipstep</string><string>snaplater</string></array></dict></array>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>NSScreenCaptureUsageDescription</key>
 	<string>Save the full display under your pointer as a local task when you press the capture shortcut. Cloud processing is optional and requires your explicit choice.</string>
-	<key>SnapLaterAppGroup</key>
+	<key>SnipstepAppGroup</key>
 	<string>$(DEVELOPMENT_TEAM).org.snaplater.shared</string>
 </dict>
 </plist>

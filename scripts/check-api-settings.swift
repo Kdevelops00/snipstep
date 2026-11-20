@@ -1,5 +1,5 @@
 import AppKit
-import SnapLaterCore
+import SnipstepCore
 
 @main struct APISettingsCheck {
     @MainActor static func main() throws {

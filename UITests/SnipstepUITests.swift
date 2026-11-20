@@ -1,6 +1,6 @@
 import XCTest
 
-@MainActor final class SnapLaterUITests: XCTestCase {
+@MainActor final class SnipstepUITests: XCTestCase {
     override func setUp() { continueAfterFailure = false }
 
     func testManualTaskAndCompletion() throws {

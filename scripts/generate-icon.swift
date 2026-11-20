@@ -2,7 +2,7 @@
 import AppKit
 
 let root = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
-    .appendingPathComponent("MacApp/Assets.xcassets/SnapLaterGlassIcon.appiconset")
+    .appendingPathComponent("MacApp/Assets.xcassets/SnipstepGlassIcon.appiconset")
 try FileManager.default.createDirectory(at: root, withIntermediateDirectories: true)
 var entries: [[String: String]] = []
 for size in [16, 32, 128, 256, 512] {
@@ -43,7 +43,7 @@ try JSONSerialization.data(withJSONObject: ["info": ["author": "xcode", "version
 
 // Keep the gallery extension's icon in sync with the containing app.
 let widgetRoot = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
-    .appendingPathComponent("Widgets/Assets.xcassets/SnapLaterWidgetIcon.appiconset")
+    .appendingPathComponent("Widgets/Assets.xcassets/SnipstepWidgetIcon.appiconset")
 try FileManager.default.createDirectory(at: widgetRoot, withIntermediateDirectories: true)
 for file in try FileManager.default.contentsOfDirectory(at: root, includingPropertiesForKeys: nil) where file.pathExtension == "png" || file.lastPathComponent == "Contents.json" {
     let destination = widgetRoot.appendingPathComponent(file.lastPathComponent)

@@ -1,7 +1,7 @@
 import AppKit
 // Older SDKs lack Sendable annotations; capture objects stay confined to MainActor.
 @preconcurrency import ScreenCaptureKit
-import SnapLaterCore
+import SnipstepCore
 
 enum CaptureFailure: Error {
     case permission, unavailable
@@ -15,7 +15,7 @@ enum CaptureFailure: Error {
 
 @MainActor final class CaptureController {
     func capture() async throws -> Data {
-        // Capture the entire display under the pointer, without activating SnapLater.
+        // Capture the entire display under the pointer, without activating Snipstep.
         let displayID = NSScreen.screens.first(where: { $0.frame.contains(NSEvent.mouseLocation) })?
             .deviceDescription[NSDeviceDescriptionKey("NSScreenNumber")] as? NSNumber
         do {
